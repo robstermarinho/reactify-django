@@ -1,0 +1,19 @@
+{% load render_bundle from webpack_loader %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#FF9000" />
+    <title>Django React Webpack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap" rel="stylesheet" />
+    <!-- Webpack rendered CSS -->
+    {% render_bundle 'main' 'css' %}
+</head>
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="react-app"></div>
+    <!-- Webpack rendered JS -->
+    {% render_bundle 'main' 'js' %}
+</body>
+</html>
