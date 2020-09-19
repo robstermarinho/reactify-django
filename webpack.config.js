@@ -5,6 +5,7 @@ module.exports = {
   entry: path.resolve(__dirname, "assets", "src", "index"),
   output: {
     path: path.resolve(__dirname, "assets", "dist"),
+    publicPath: "/static/",
     filename: "[name]-[hash].js",
   },
   module: {
@@ -26,9 +27,6 @@ module.exports = {
         use: [
           {
             loader: "file-loader",
-            options: {
-              outputPath: "/static/dist/",
-            },
           },
         ],
       },
