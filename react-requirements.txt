@@ -1,0 +1,5 @@
+# Dependencies
+
+# Dev Dependencies
+yarn add webpack webpack-cli -D
+npm install webpack-bundle-tracker --save-dev

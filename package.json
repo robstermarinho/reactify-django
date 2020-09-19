@@ -1,0 +1,18 @@
+{
+  "name": "DjangoReact",
+  "version": "1.0.0",
+  "description": "Django + React",
+  "main": "assets/src/index.js",
+  "author": "Robert Marinho <robstermarinho@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-bundle-tracker": "^0.4.3"
+  },
+  "scripts": {
+    "start": "./node_modules/.bin/webpack --config webpack.config.js",
+    "watch": "yarn start -- --watch"
+  }
+}
