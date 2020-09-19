@@ -2,9 +2,9 @@ var path = require("path");
 var webpack = require("webpack");
 var BundleTracker = require("webpack-bundle-tracker");
 module.exports = {
-  entry: path.resolve(__dirname, "assets", "src", "index"),
+  entry: path.resolve(__dirname, "react-app", "src", "index"),
   output: {
-    path: path.resolve(__dirname, "assets", "dist"),
+    path: path.resolve(__dirname, "react-app", "dist"),
     publicPath: "/static/",
     filename: "[name]-[hash].js",
   },

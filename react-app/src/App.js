@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../img/31253.jpg";
+import image from "../assets/img/31253.jpg";
 // import { Container } from './styles';
 
 function App() {
