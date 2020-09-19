@@ -13,5 +13,5 @@ yarn add --dev webpack-bundle-tracker
 # Babel loader
 yarn add babel-loader -D
 
-# CSS loaders AND css loaders
+# Style loaders AND css loaders
 yarn add style-loader css-loader
