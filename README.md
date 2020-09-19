@@ -1,4 +1,5 @@
-<h2>Django + React + Webpack + Babel = Awesome App!!</h2>
+## Small basic setup for a Django + React + Babel + Webpack app
+
 <br>
 
 ### Django
