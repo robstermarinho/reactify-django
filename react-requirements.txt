@@ -10,8 +10,8 @@ yarn add @babel/core @babel/preset-env @babel/preset-react webpack webpack-cli -
 # Stable version: "webpack-bundle-tracker": "^0.4.3"
 yarn add --dev webpack-bundle-tracker
 
+# Babel loader
+yarn add babel-loader -D
 
-npm install webpack-bundle-tracker --save-dev
-
-yarn add babel-cli babel-core babel-loader babel-preset-env babel-preset-es2015 babel-preset-react babel-register -D
-yarn add @babel/core
+# CSS loaders AND css loaders
+yarn add style-loader css-loader

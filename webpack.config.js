@@ -7,7 +7,18 @@ module.exports = {
     path: path.resolve(__dirname, "assets/dist"),
     filename: "[name]-[hash].js",
   },
-  // Where webpack will save the satatus
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+        },
+      },
+    ],
+  },
+  // Where webpack will save the satatuses
   plugins: [
     new BundleTracker({
       path: __dirname,
