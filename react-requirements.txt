@@ -1,5 +1,17 @@
 # Dependencies
+# INIT
+yarn init -y
+yarn add react react-dom
 
 # Dev Dependencies
-yarn add webpack webpack-cli -D
+yarn add @babel/core @babel/preset-env @babel/preset-react webpack webpack-cli -D
+
+# webpack-bundle-tracker
+# Stable version: "webpack-bundle-tracker": "^0.4.3"
+yarn add --dev webpack-bundle-tracker
+
+
 npm install webpack-bundle-tracker --save-dev
+
+yarn add babel-cli babel-core babel-loader babel-preset-env babel-preset-es2015 babel-preset-react babel-register -D
+yarn add @babel/core

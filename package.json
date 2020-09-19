@@ -5,14 +5,20 @@
   "main": "assets/src/index.js",
   "author": "Robert Marinho <robstermarinho@gmail.com>",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
   "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
     "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12",
-    "webpack-bundle-tracker": "^0.4.3"
+    "webpack-bundle-tracker": "^0.4.3",
+    "webpack-cli": "^3.3.12"
   },
   "scripts": {
-    "start": "./node_modules/.bin/webpack --config webpack.config.js",
-    "watch": "yarn start -- --watch"
+    "start": "webpack --config webpack.config.js --mode development",
+    "dev": "yarn start -- --watch"
   }
 }
