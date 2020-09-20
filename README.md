@@ -1,32 +1,72 @@
-## Small basic setup for a Django + React + Babel + Webpack app
+## Django + React + Babel + Webpack
+
+Basic setup application for:
+
+- Django
+- React
+- Babel
+- Webpack
+- JWT Authentication
+- REST api
 
 <br>
 
-### Django
+## Django
+
+1. Install requirements
 
 ```
-# Install requirements
 pip install -r requirements.txt
+```
 
-# Make migrations
+2. Make migrations
+
+```
 python manage.py makemigrations
+```
 
-# Migrate
+3. Migrate
+
+```
 python manage.py migrate
+```
 
-# Create super user
+4. Create super user
+
+```
 python manage.py createsuperuser
-
-# Run server
-python manage.py runserver localhost:8000
 ```
 
-### REACT
+## Run server
 
 ```
-# Install requirements
+python manage.py runserver
+```
+
+### Django REST API
+
+Obtain Token
+
+```
+POST 127.0.0.1:8000/api/token/obtain/
+```
+
+Refresh Token
+
+```
+POST 127.0.0.1:8000/api/token/refresh/
+```
+
+## REACT
+
+1. Install requirements
+
+```
 yarn install
+```
 
-# Start dev server
+2. Start dev server
+
+```
 yarn dev
 ```

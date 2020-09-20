@@ -8,7 +8,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     # AUTH
-    path('accounts/', include('django.contrib.auth.urls')),  # new
+    path('accounts/', include('django.contrib.auth.urls')),
+
+    # API
+    path('api/', include('authentication.urls')),
 
     # FRONT-END (REACT)
     path('', login_required(TemplateView.as_view(template_name='front-end/index.html'))),
