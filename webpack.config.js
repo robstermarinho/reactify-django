@@ -4,8 +4,8 @@ var BundleTracker = require("webpack-bundle-tracker");
 module.exports = {
   entry: path.resolve(__dirname, "react-app", "src", "index"),
   output: {
-    path: path.resolve(__dirname, "react-app", "dist"),
-    publicPath: "/static/",
+    path: path.resolve(__dirname, "react-app", "assets", "dist"),
+    publicPath: "/static/dist/",
     filename: "[name]-[hash].js",
   },
   devServer: {

@@ -125,7 +125,7 @@ STATIC_URL = '/static/'
 
 # Serve static files
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'react-app/dist'),
+    os.path.join(BASE_DIR, 'react-app/assets'),
 )
 
 
