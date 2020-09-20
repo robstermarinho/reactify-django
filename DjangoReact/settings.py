@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'authentication',
     'rest_framework',
     'webpack_loader'
 ]
@@ -149,3 +150,6 @@ WEBPACK_LOADER = {
         'CACHE': not DEBUG
     }
 }
+
+# Custom user model
+AUTH_USER_MODEL = "authentication.CustomUser"
