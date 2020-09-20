@@ -8,7 +8,7 @@ function App() {
       <br />
       <img width={500} src={image} />
 
-      <h1>Django + React + Webpack + Babel = Awesome App!!</h1>
+      <h1>Django + React + Webpack + Babel = Awesome App!!!</h1>
     </>
   );
 }

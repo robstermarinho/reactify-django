@@ -8,6 +8,12 @@ module.exports = {
     publicPath: "/static/",
     filename: "[name]-[hash].js",
   },
+  devServer: {
+    // Django need to see new changes in disk
+    // instead of changes in memory
+    // so it can automatically reload It
+    writeToDisk: true,
+  },
   module: {
     rules: [
       {

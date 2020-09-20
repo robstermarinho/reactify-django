@@ -14,4 +14,11 @@ yarn add --dev webpack-bundle-tracker
 yarn add babel-loader -D
 
 # Style loaders AND css loaders
-yarn add style-loader css-loader
+yarn add style-loader css-loader -D
+
+# File leader
+yarn add file-loader -D
+
+
+# Webpack dev-server
+yarn add webpack-dev-server -D

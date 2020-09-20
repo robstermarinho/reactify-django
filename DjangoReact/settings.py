@@ -141,3 +141,9 @@ WEBPACK_LOADER = {
         'LOADER_CLASS': 'webpack_loader.loader.WebpackLoader',
     }
 }
+
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'CACHE': not DEBUG
+    }
+}
