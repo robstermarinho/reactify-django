@@ -1,7 +1,5 @@
 from django.contrib import admin
-from django.views.generic import TemplateView
-from django.urls import path, reverse_lazy, include
-from django.contrib.auth.decorators import login_required
+from django.urls import path, include
 
 urlpatterns = [
     # ADMIN
@@ -14,5 +12,6 @@ urlpatterns = [
     path('api/', include('authentication.urls')),
 
     # FRONT-END (REACT)
-    path('', login_required(TemplateView.as_view(template_name='front-end/index.html'))),
+    path('', include('frontend.urls'))
 ]
+
