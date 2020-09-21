@@ -13,7 +13,8 @@ class ObtainTokenPairWithEmailView(TokenObtainPairView):
 class CustomUserCreate(APIView):
     permission_classes = (permissions.AllowAny,)
 
-    def post(self, request):
+    @staticmethod
+    def post(request):
         serializer = CustomUserSerializer(data=request.data)
         if serializer.is_valid():
             user = serializer.save()
@@ -27,5 +28,6 @@ class HelloWorldView(APIView):
     """
     Hello world API
     """
-    def get(self, request):
+    @staticmethod
+    def get(request):
         return Response(data={"hello":"world"}, status=status.HTTP_200_OK)
