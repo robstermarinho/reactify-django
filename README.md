@@ -7,7 +7,7 @@ Basic setup application for:
 - Babel
 - Webpack
 - JWT Authentication
-- REST api
+- REST API
 
 <br>
 

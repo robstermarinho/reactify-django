@@ -7,6 +7,20 @@
   flex-direction: column;
 }
 
+.content img {
+  margin: 20px;
+}
+
+.content h1 {
+  margin: 20px;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.content a {
+  margin: 20px;
+}
+
 .content .btn {
   background: #6c625c;
   height: 46px;

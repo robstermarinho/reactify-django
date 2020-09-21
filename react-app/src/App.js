@@ -15,6 +15,8 @@ function App() {
         <li>React</li>
         <li>Webpack</li>
         <li>Babel</li>
+        <li>JWT Authentication</li>
+        <li>REST API</li>
       </ul>
       <a href="accounts/logout">Logout</a>
     </div>
