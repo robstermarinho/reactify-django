@@ -7,10 +7,6 @@
   flex-direction: column;
 }
 
-.content img {
-  margin: 20px;
-}
-
 .content h1 {
   margin: 15px;
   font-weight: 600;

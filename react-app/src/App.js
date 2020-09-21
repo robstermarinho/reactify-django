@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="content">
       <br />
-      <img width={800} src={image} />
+      <img width={1200} src={image} />
 
       <h1>Hello {user_email}</h1>
       <p>This is a basic setup for:</p>
@@ -24,7 +24,7 @@ function App() {
         <li>JWT Authentication</li>
         <li>REST API</li>
       </ul>
-      <a href="accounts/logout"> Logout</a>
+      <a href="/accounts/logout"> Logout</a>
     </div>
   );
 }
