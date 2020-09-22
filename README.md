@@ -70,3 +70,9 @@ yarn install
 ```
 yarn dev
 ```
+
+### Tests
+
+```
+coverage run --omit='*/venv/*' manage.py test
+```
