@@ -12,7 +12,13 @@
 }
 
 .content form {
-  min-width: 400px;
+  width: 400px;
+}
+.content .errorlist li{
+  color: #9e1e33;
+  padding: 20px 10px;
+  list-style-type: none;
+  font-size: 12px;
 }
 
 .content form > p {
@@ -25,6 +31,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+    margin-bottom: 10px;
 }
 .content form > p > label {
   color: #91857e;

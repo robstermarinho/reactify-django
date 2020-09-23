@@ -43,6 +43,12 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
+### Tests
+
+```
+coverage run --omit='*/venv/*' manage.py test
+```
+
 ### Django REST API
 
 Obtain Token
@@ -59,7 +65,7 @@ POST 127.0.0.1:8000/api/token/refresh/
 
 ## REACT
 
-1. Install requirements
+1. Install dependencies
 
 ```
 yarn install
@@ -69,10 +75,4 @@ yarn install
 
 ```
 yarn dev
-```
-
-### Tests
-
-```
-coverage run --omit='*/venv/*' manage.py test
 ```
