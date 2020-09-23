@@ -2,7 +2,7 @@ import datetime
 
 from django.contrib.auth.models import User
 from django.test import TestCase
-from rest_framework.test import APIClient
+from rest_framework.test import APIClient, APITestCase
 from rest_framework.authtoken.models import Token
 from authentication.models import CustomUser
 
@@ -26,7 +26,7 @@ class TestCustomUser(TestCase):
         self.assertEqual(self.user.age, 20)
 
 
-class TestUserCreateAPI(TestCase):
+class TestUserCreateAPI(APITestCase):
     def setUp(self):
         self.current_year = datetime.datetime.now().year
         self.user = CustomUser.objects.create_user(
@@ -87,7 +87,7 @@ class TestUserCreateAPI(TestCase):
         self.assertEqual(CustomUser.objects.count(), 1)
 
 
-class TestObtainTokenAPI(TestCase):
+class TestObtainTokenAPI(APITestCase):
     def setUp(self):
         self.user = CustomUser.objects.create_user(
             email="robert@marinho.com",
@@ -115,7 +115,7 @@ class TestObtainTokenAPI(TestCase):
         self.assertEqual(response.status_code, 401)
 
 
-class TestAuthHelloAPI(TestCase):
+class TestAuthHelloAPI(APITestCase):
     def setUp(self):
         self.user = CustomUser.objects.create_user(
             email="robert@marinho.com",
@@ -135,11 +135,9 @@ class TestAuthHelloAPI(TestCase):
         response = self.client.post("/api/token/obtain/", data=data)
         access_token = response.data['access']
 
-        client = APIClient()
-        client.credentials(HTTP_AUTHORIZATION='JWT ' + access_token)
+        self.client.credentials(HTTP_AUTHORIZATION='JWT ' + access_token)
 
-        response = client.get("/api/hello/")
+        response = self.client.get("/api/hello/")
         self.assertEqual(response.status_code, 200)
         self.assertIn('hello', response.data)
         self.assertEqual(response.data['hello'], 'world')
-
