@@ -1,12 +1,12 @@
-var path = require("path");
-var webpack = require("webpack");
-var BundleTracker = require("webpack-bundle-tracker");
+var path = require('path');
+var webpack = require('webpack');
+var BundleTracker = require('webpack-bundle-tracker');
 module.exports = {
-  entry: path.resolve(__dirname, "react-app", "src", "index"),
+  entry: path.resolve(__dirname, 'react-app', 'src', 'index'),
   output: {
-    path: path.resolve(__dirname, "react-app", "assets", "dist"),
-    publicPath: "/static/dist/",
-    filename: "[name]-[hash].js",
+    path: path.resolve(__dirname, 'react-app', 'assets', 'dist'),
+    publicPath: '/static/dist/',
+    filename: '[name]-[hash].js',
   },
   devServer: {
     // Django need to see new changes in disk
@@ -20,19 +20,19 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
         },
       },
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        use: [{ loader: "style-loader" }, { loader: "css-loader" }],
+        use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
       },
       {
-        test: /\.(gif|png|jpe?g|gif)$/i,
+        test: /\.(gif|png|svg|jpe?g|gif)$/i,
         use: [
           {
-            loader: "file-loader",
+            loader: 'file-loader',
           },
         ],
       },
@@ -43,7 +43,7 @@ module.exports = {
   plugins: [
     new BundleTracker({
       path: __dirname,
-      filename: "./webpack-stats.json",
+      filename: './webpack-stats.json',
     }),
   ],
 };
